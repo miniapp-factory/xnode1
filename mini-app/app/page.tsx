@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -54,9 +55,9 @@ export default function Home() {
             variant="outline"
             size="lg"
             className="animate-pulse"
-            href="/download"
+            asChild
           >
-            Download Now
+            <Link href="/download">Download Now</Link>
           </Button>
         </div>
         <div className="flex-1 flex justify-center">
@@ -107,10 +108,10 @@ export default function Home() {
         <Button
           variant="default"
           size="lg"
-          href="/download"
+          asChild
           className="animate-bounce"
         >
-          Get Started
+          <Link href="/download">Get Started</Link>
         </Button>
         <img
           src="/cta.png"
